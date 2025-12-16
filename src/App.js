@@ -337,9 +337,9 @@ function App() {
                   <TableBody>
                     {result1.details.map((row, i) => (
                       <TableRow key={i}>
-                        <TableCell sx={row.highlight ? { fontWeight: 'bold', fontSize: '1.15em' } : {}}>{row["항목"]}</TableCell>
-                        <TableCell sx={row.highlight ? { fontWeight: 'bold', fontSize: '1.15em' } : {}}>{row["금액(원)"].toLocaleString()}</TableCell>
-                        <TableCell sx={row.highlight ? { fontWeight: 'bold', fontSize: '1.15em' } : {}}>{row["계산식"]}</TableCell>
+                        <TableCell sx={row.highlight ? { fontWeight: 'bold', fontSize: '1.1em' } : {}}>{row["항목"]}</TableCell>
+                        <TableCell sx={row.highlight ? { fontWeight: 'bold', fontSize: '1.1em' } : {}}>{row["금액(원)"].toLocaleString()}</TableCell>
+                        <TableCell sx={row.highlight ? { fontWeight: 'bold', fontSize: '1.1em' } : {}}>{row["계산식"]}</TableCell>
                       </TableRow>
                     ))}
                   </TableBody>
@@ -540,9 +540,9 @@ function App() {
                   <TableBody>
                     {result2.details.map((row, i) => (
                       <TableRow key={i}>
-                        <TableCell sx={row.highlight ? { fontWeight: 'bold', fontSize: '1.15em' } : {}}>{row["항목"]}</TableCell>
-                        <TableCell sx={row.highlight ? { fontWeight: 'bold', fontSize: '1.15em' } : {}}>{row["금액(원)"].toLocaleString()}</TableCell>
-                        <TableCell sx={row.highlight ? { fontWeight: 'bold', fontSize: '1.15em' } : {}}>{row["계산식"]}</TableCell>
+                        <TableCell sx={row.highlight ? { fontWeight: 'bold', fontSize: '1.1em' } : {}}>{row["항목"]}</TableCell>
+                        <TableCell sx={row.highlight ? { fontWeight: 'bold', fontSize: '1.1em' } : {}}>{row["금액(원)"].toLocaleString()}</TableCell>
+                        <TableCell sx={row.highlight ? { fontWeight: 'bold', fontSize: '1.1em' } : {}}>{row["계산식"]}</TableCell>
                       </TableRow>
                     ))}
                   </TableBody>
