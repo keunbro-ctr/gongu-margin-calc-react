@@ -154,7 +154,7 @@ function App() {
       <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
         <CalculateIcon color="primary" sx={{ fontSize: 38, mr: 1 }} />
         <Typography variant="h5" sx={{ fontWeight: 600 }}>
-          <span style={{ color: "#13185aff", fontWeight: 900 }}>맨땅멘토</span>
+          <span style={{ color: "#13185aff", fontWeight: 900 }}>유근형</span>
           의 공동구매 마진 계산기 <span style={{ color: "#666", fontWeight: 400, fontSize: 23 }}>(공급사 입장)</span>
         </Typography>
       </Box>
