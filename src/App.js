@@ -51,7 +51,7 @@ function createResultTable(
     { 항목: "2. 셀러 수수료 (회계상 비용 기준)", "금액(원)": Math.round(셀러_회계상_비용), 계산식: "공구가(할인후) × 셀러수수료율%" },
     { 항목: is_벤더사거래 ? "3. 벤더사 수수료" : "3. 벤더사 수수료 (해당 없음)", "금액(원)": Math.round(vendor_fee), 계산식: is_벤더사거래 ? "공구가(할인후) × 벤더수수료율%" : "해당없음" },
     { 항목: "4. PG 수수료 (공급사 부담 시)", "금액(원)": Math.round(pg_fee), 계산식: 결제주체 === "공급사" ? "공구가(할인후) × PG수수료율%" : "해당없음" },
-    { 항목: "5. 수수료 차감 후 입금액(공급가)", "금액(원)": Math.round(supplier_income_before_expense), 계산식: "공구가(할인후) - 셀러수수료 - 벤더사수수료" },
+    { 항목: "5. 수수료 차감 후 입금액(공급가)", "금액(원)": Math.round(supplier_income_before_expense), 계산식: "공구가(할인후) - 셀러수수료 - 벤더사수수료", highlight: true },
     { 항목: "6. 공급사 총비용 (제품+포장+택배)", "금액(원)": supplier_costs, 계산식: "제품원가 + 포장비 + 택배비" },
     { 항목: "7. 원천징수 (비사업자)", "금액(원)": Math.round(셀러_원천징수), 계산식: (!공급사PG부담시_셀러사업자 && !is_벤더사거래 && 결제주체 === "공급사") ? "셀러수수료(세전) × 3.3%" : "해당없음" },
     { 항목: "8. 부가세 (VAT)", "금액(원)": Math.round(vat), 계산식: (taxable_base > 0) ? "(수수료차감 후 입금액 - PG수수료 - 공급사총비용) ÷ 11" : "0" },
@@ -337,9 +337,9 @@ function App() {
                   <TableBody>
                     {result1.details.map((row, i) => (
                       <TableRow key={i}>
-                        <TableCell>{row["항목"]}</TableCell>
-                        <TableCell>{row["금액(원)"].toLocaleString()}</TableCell>
-                        <TableCell>{row["계산식"]}</TableCell>
+                        <TableCell sx={row.highlight ? { fontWeight: 'bold', fontSize: '1.15em' } : {}}>{row["항목"]}</TableCell>
+                        <TableCell sx={row.highlight ? { fontWeight: 'bold', fontSize: '1.15em' } : {}}>{row["금액(원)"].toLocaleString()}</TableCell>
+                        <TableCell sx={row.highlight ? { fontWeight: 'bold', fontSize: '1.15em' } : {}}>{row["계산식"]}</TableCell>
                       </TableRow>
                     ))}
                   </TableBody>
@@ -540,9 +540,9 @@ function App() {
                   <TableBody>
                     {result2.details.map((row, i) => (
                       <TableRow key={i}>
-                        <TableCell>{row["항목"]}</TableCell>
-                        <TableCell>{row["금액(원)"].toLocaleString()}</TableCell>
-                        <TableCell>{row["계산식"]}</TableCell>
+                        <TableCell sx={row.highlight ? { fontWeight: 'bold', fontSize: '1.15em' } : {}}>{row["항목"]}</TableCell>
+                        <TableCell sx={row.highlight ? { fontWeight: 'bold', fontSize: '1.15em' } : {}}>{row["금액(원)"].toLocaleString()}</TableCell>
+                        <TableCell sx={row.highlight ? { fontWeight: 'bold', fontSize: '1.15em' } : {}}>{row["계산식"]}</TableCell>
                       </TableRow>
                     ))}
                   </TableBody>
